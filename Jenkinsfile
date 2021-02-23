@@ -1,5 +1,3 @@
-#def app_name="${project_name}"
-
 pipeline {
     agent any 
     tools {maven "mymvn"}
