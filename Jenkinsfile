@@ -1,4 +1,4 @@
-def app_name="${project_name}"
+#def app_name="${project_name}"
 
 pipeline {
     agent any 
@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("git clone") {
             steps {
-                git credentialsId: 'tejesh-github', url: 'https://github.com/tejesh555/${app_name}.git'
+                git credentialsId: 'tejesh-github', url: 'https://github.com/tejesh555/${project_name}.git'
             }
         }
 
