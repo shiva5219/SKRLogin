@@ -1,5 +1,5 @@
 pipeline {
-    agent any 
+    agent {label: "test_label"} 
     tools {maven "mymvn"}
     stages {
         stage("git clone") {
