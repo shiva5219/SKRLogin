@@ -13,6 +13,12 @@ pipeline {
                 sh "mvn clean install"
             }
         }
+        
+        stage ("test") {
+            steps {
+                sh "echo 'test cases'"
+            }
+        }
 
         stage ("publish") {
             steps {
@@ -34,6 +40,18 @@ pipeline {
                     buildName: "${ JOB_NAME }",
                     buildNumber: "${BUILD_NUMBER }"
                 )
+            }
+        }
+        
+        stage ("validation") {
+            steps {
+                sh "echo 'validation'"
+            }
+        }
+        
+        stage ("deploy") {
+            steps {
+                sh "echo 'ansible-playbook -i hosts deploy.yml'"
             }
         }
 
