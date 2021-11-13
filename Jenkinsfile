@@ -18,8 +18,8 @@ pipeline {
             steps {
                 sh "echo 'test cases'"
             }
-        }
-
+        } 
+/*
         stage ("publish") {
             steps {
                 rtUpload (
@@ -41,7 +41,7 @@ pipeline {
                     buildNumber: "${BUILD_NUMBER }"
                 )
             }
-        }
+        } */
         
         stage ("validation") {
             steps {
